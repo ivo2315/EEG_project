@@ -40,4 +40,3 @@ Custom script included in the repo for pushing markers during the data collectio
 
 # Data
 The raw data is provided in the data/raw folder.
-# EEG_project
