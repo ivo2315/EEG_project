@@ -1,0 +1,29 @@
+# ── Environment / tooling ─────────────────────────────────────────────────────
+.claude
+.env
+.venv
+
+# ── Python bytecode ───────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+
+# ── Raw EEG recordings ────────────────────────────────────────────────────────
+# The .xdf files are ~232 MB of binary source data. They are the inputs to the
+# pipeline, not a product of it, and every derived file can be regenerated from
+# them by re-running "02. Code/00. Data_prep_all _cases.ipynb" in a few seconds.
+# Keep them backed up outside git.
+# The folder itself stays in the repo via 01. Data/00. Raw/.gitkeep, so a fresh
+# clone has somewhere to put them.
+*.xdf
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Old project leftovers ─────────────────────────────────────────────────────
+data/processed/*
+Case2.ipynb
+
+# ── Participant data ──────────────────────────────────────────────────────────
+# Per-participant demographics and state variables (sleep, alcohol, caffeine,
+# session date/time). Human-subjects data — kept out of the public repository.
+01. Data/Respondents_profiles.csv
